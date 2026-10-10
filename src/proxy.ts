@@ -6,7 +6,11 @@ import { NextResponse, type NextRequest } from "next/server";
 // La autorización real (quién puede ver/editar qué) se re-verifica siempre en el
 // servidor dentro de cada Data Access Layer (src/data/*) y en RLS — nunca solo aquí.
 
-const RUTAS_PUBLICAS = ["/login", "/auth", "/robots.txt"];
+// /icon, /apple-icon y /opengraph-image son rutas generadas por código (next/og,
+// sin extensión en la URL) — el matcher de abajo solo excluye por extensión de
+// archivo, así que sin esto quedarían bloqueadas para visitantes sin sesión
+// (justo quienes las necesitan: el navegador en la landing, crawlers de redes).
+const RUTAS_PUBLICAS = ["/login", "/auth", "/robots.txt", "/icon", "/apple-icon", "/opengraph-image"];
 
 export async function proxy(request: NextRequest) {
   let response = NextResponse.next({ request });
