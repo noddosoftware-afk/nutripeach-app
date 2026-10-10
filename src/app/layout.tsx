@@ -12,7 +12,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://nutrinani-app.vercel.app"),
+  metadataBase: new URL("https://nutripeach-app.vercel.app"),
   title: "Nutripeach",
   description: "Plataforma clínica para consultorios de nutrición",
   openGraph: {
