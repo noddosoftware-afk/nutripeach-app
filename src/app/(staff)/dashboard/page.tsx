@@ -53,13 +53,16 @@ function saludo(hora: number) {
 }
 
 export default async function DashboardPage() {
-  const m = await obtenerMetricas();
+  const [sesion, m] = await Promise.all([requireStaff(), obtenerMetricas()]);
   const hora = new Date(ahoraMs()).getHours();
+  const primerNombre = sesion.nombreCompleto.split(" ")[0];
 
   return (
     <div className="space-y-10">
       <div>
-        <h1 className="font-display text-3xl italic text-brand-900">{saludo(hora)}, Daniela</h1>
+        <h1 className="font-display text-3xl italic text-brand-900">
+          {saludo(hora)}, {primerNombre}
+        </h1>
         <p className="mt-1 text-sm text-ink-soft">Este es el resumen de tu consultorio.</p>
       </div>
 

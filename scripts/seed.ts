@@ -29,19 +29,19 @@ async function main() {
   if (errConsultorio) throw errConsultorio;
   const consultorioId = consultorio.id as string;
 
-  // --- Nutrióloga (Daniela) -------------------------------------------------
-  const { data: authDaniela, error: errDaniela } = await supabase.auth.admin.createUser({
-    email: "daniela@nutripeach.demo",
+  // --- Nutrióloga -------------------------------------------------
+  const { data: authNutriologa, error: errNutriologa } = await supabase.auth.admin.createUser({
+    email: "nutriologa@nutripeach.demo",
     password: "DemoNutripeach123!",
     email_confirm: true,
   });
-  if (errDaniela) throw errDaniela;
+  if (errNutriologa) throw errNutriologa;
 
   await supabase.from("profiles").insert({
-    id: authDaniela.user.id,
+    id: authNutriologa.user.id,
     consultorio_id: consultorioId,
     rol: "nutriologa",
-    nombre_completo: "Daniela",
+    nombre_completo: "Nutrióloga",
   });
 
   // --- Asistente ficticia ----------------------------------------------------
@@ -70,7 +70,7 @@ async function main() {
       telefono: "5555555555",
       email: "paciente1@nutripeach.demo",
       objetivos: "Mejorar hábitos alimenticios y composición corporal (dato de demostración).",
-      creado_por: authDaniela.user.id,
+      creado_por: authNutriologa.user.id,
     })
     .select()
     .single();
@@ -99,7 +99,7 @@ async function main() {
     sexo: "masculino",
     telefono: "5555555556",
     objetivos: "Control de peso (dato de demostración).",
-    creado_por: authDaniela.user.id,
+    creado_por: authNutriologa.user.id,
   });
   if (errPaciente2) throw errPaciente2;
 
@@ -170,7 +170,7 @@ async function main() {
       nombre: "Pollo con arroz y brócoli",
       preparacion: "Cocer el pollo a la plancha, el arroz al vapor y el brócoli al vapor. Servir junto.",
       rendimiento_porciones: 1,
-      creado_por: authDaniela.user.id,
+      creado_por: authNutriologa.user.id,
     })
     .select()
     .single();
@@ -184,7 +184,7 @@ async function main() {
   ]);
 
   console.log("Listo. Cuentas de demostración (contraseña: DemoNutripeach123!):");
-  console.log("  Nutrióloga: daniela@nutripeach.demo");
+  console.log("  Nutrióloga: nutriologa@nutripeach.demo");
   console.log("  Asistente:  asistente@nutripeach.demo");
   console.log("  Paciente:   paciente1@nutripeach.demo");
 }

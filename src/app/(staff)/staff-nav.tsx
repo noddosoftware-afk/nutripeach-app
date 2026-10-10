@@ -109,12 +109,7 @@ export function StaffSidebar({ nombre, rol }: { nombre: string; rol: string }) {
     >
       <div className={`flex items-center gap-2.5 px-5 py-6 ${colapsado ? "justify-center px-3" : ""}`}>
         <Logo size={32} />
-        {!colapsado && (
-          <div className="min-w-0">
-            <p className="truncate font-display text-base font-semibold text-brand-900">Daniela Balandran</p>
-            <p className="truncate text-xs text-ink-soft">Nutrióloga</p>
-          </div>
-        )}
+        {!colapsado && <p className="truncate font-display text-base font-semibold text-brand-900">Nutripeach</p>}
       </div>
 
       <nav className={`flex-1 space-y-1 overflow-y-auto px-3 ${colapsado ? "px-2" : ""}`}>
@@ -185,10 +180,7 @@ export function StaffMobileNav({ nombre, rol }: { nombre: string; rol: string })
             <div className="flex items-center justify-between px-5 py-5">
               <div className="flex items-center gap-2.5">
                 <Logo size={30} />
-                <div>
-                  <p className="font-display text-sm font-semibold text-brand-900">Daniela Balandran</p>
-                  <p className="text-xs text-ink-soft">Nutrióloga</p>
-                </div>
+                <p className="font-display text-sm font-semibold text-brand-900">Nutripeach</p>
               </div>
               <button
                 type="button"

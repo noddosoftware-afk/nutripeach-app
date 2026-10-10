@@ -19,7 +19,7 @@ const FUNCIONALIDADES = [
   {
     icon: ClipboardList,
     titulo: "Planes nutricionales a tu medida",
-    descripcion: "Planes de alimentación diseñados y publicados por Daniela según tus objetivos y necesidades.",
+    descripcion: "Planes de alimentación diseñados y publicados por tu nutrióloga según tus objetivos y necesidades.",
   },
   {
     icon: Dumbbell,
@@ -64,8 +64,8 @@ export function LandingPage() {
             <a href="#funcionalidades" className="transition-colors hover:text-ink">
               Funcionalidades
             </a>
-            <a href="#sobre-daniela" className="transition-colors hover:text-ink">
-              Sobre Daniela
+            <a href="#enfoque" className="transition-colors hover:text-ink">
+              Nuestro enfoque
             </a>
           </nav>
           <Link href="/login" className={botonPrimario}>
@@ -88,8 +88,8 @@ export function LandingPage() {
                 resultados con cuidado.
               </h1>
               <p className="mt-6 max-w-lg text-base leading-relaxed text-ink-soft sm:text-lg">
-                Daniela Balandrán acompaña a cada paciente con un enfoque cercano y personalizado:
-                planes de alimentación, entrenamientos y seguimiento, todo desde un solo lugar.
+                Tu nutrióloga te acompaña con un enfoque cercano y personalizado: planes de
+                alimentación, entrenamientos y seguimiento, todo desde un solo lugar.
               </p>
               <div className="mt-9 flex flex-wrap gap-3">
                 <Link href="/login" className={botonPrimario}>
@@ -148,8 +148,8 @@ export function LandingPage() {
           </div>
         </section>
 
-        {/* Sobre Daniela */}
-        <section id="sobre-daniela" className="py-20 sm:py-28">
+        {/* Nuestro enfoque */}
+        <section id="enfoque" className="py-20 sm:py-28">
           <div className="mx-auto grid w-full max-w-7xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-2 lg:gap-16">
             <div className="shadow-soft relative order-2 aspect-[4/3] w-full overflow-hidden rounded-3xl border border-cream-200 lg:order-1">
               <Image
@@ -161,15 +161,15 @@ export function LandingPage() {
               />
             </div>
             <div className="order-1 lg:order-2">
-              <p className="text-sm font-medium uppercase tracking-[0.25em] text-brand-700">Sobre Daniela</p>
+              <p className="text-sm font-medium uppercase tracking-[0.25em] text-brand-700">Nuestro enfoque</p>
               <h2 className="mt-3 font-display text-3xl italic text-brand-900 sm:text-4xl">
                 Un acompañamiento cercano, no una dieta genérica
               </h2>
               <p className="mt-5 leading-relaxed text-ink-soft">
-                Daniela Balandrán es nutrióloga y trabaja de cerca con cada paciente, entendiendo su
-                historia, su ritmo de vida y sus objetivos antes de proponer cualquier plan. La
-                plataforma Nutripeach es el puente entre cada consulta: aquí vives el seguimiento,
-                revisas tu plan y mantienes la comunicación con tu nutrióloga.
+                Tu nutrióloga trabaja de cerca con cada paciente, entendiendo su historia, su ritmo
+                de vida y sus objetivos antes de proponer cualquier plan. La plataforma Nutripeach es
+                el puente entre cada consulta: aquí vives el seguimiento, revisas tu plan y mantienes
+                la comunicación con tu nutrióloga.
               </p>
               <div className="mt-8">
                 <Link href="/login" className={botonPrimario}>
@@ -200,7 +200,7 @@ export function LandingPage() {
         {/* CTA final */}
         <section className="bg-brand-900 py-20 text-white sm:py-24">
           <div className="mx-auto flex w-full max-w-3xl flex-col items-center gap-6 px-5 text-center sm:px-8">
-            <h2 className="font-display text-3xl italic sm:text-4xl">¿Ya eres paciente de Daniela?</h2>
+            <h2 className="font-display text-3xl italic sm:text-4xl">¿Ya eres paciente del consultorio?</h2>
             <p className="max-w-md text-brand-100/80">
               Accede a tu portal para revisar tu plan, tu progreso y tus próximas consultas.
             </p>
@@ -222,7 +222,7 @@ export function LandingPage() {
             <Logo size={20} />
             <span className="font-display text-sm font-semibold text-brand-900">Nutripeach</span>
           </div>
-          <p>Consultorio privado de nutrición — Daniela Balandrán</p>
+          <p>Consultorio privado de nutrición</p>
         </div>
       </footer>
     </div>

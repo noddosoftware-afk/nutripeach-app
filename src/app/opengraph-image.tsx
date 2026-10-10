@@ -23,7 +23,7 @@ export default function OpengraphImage() {
           Nutripeach
         </div>
         <div style={{ fontSize: 32, color: "#9C7A5C", marginTop: 16, display: "flex" }}>
-          Consultorio privado de nutrición — Daniela Balandrán
+          Consultorio privado de nutrición
         </div>
       </div>
     ),

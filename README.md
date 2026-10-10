@@ -1,6 +1,6 @@
 # Nutripeach
 
-Plataforma clínica para el consultorio de nutrición de Daniela. Ver `docs/PROPUESTA.md` para el
+Plataforma clínica para consultorios de nutrición. Ver `docs/PROPUESTA.md` para el
 resumen completo (arquitectura, supuestos, matriz de funciones, plan de fases).
 
 ## Stack
@@ -43,7 +43,7 @@ Next.js 16 (App Router) + TypeScript + Tailwind CSS 4 + Supabase (Postgres, Auth
    ```
 
    Crea tres cuentas de prueba, todas con contraseña `DemoNutripeach123!`:
-   - `daniela@nutripeach.demo` (nutrióloga)
+   - `nutriologa@nutripeach.demo` (nutrióloga)
    - `asistente@nutripeach.demo` (asistente)
    - `paciente1@nutripeach.demo` (portal del paciente)
 

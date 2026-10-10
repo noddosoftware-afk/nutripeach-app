@@ -30,8 +30,8 @@ export default async function LoginPage({ searchParams }: PageProps<"/login">) {
         </div>
 
         <div className="relative">
-          <p className="font-display text-xl italic text-white">Daniela Balandran</p>
-          <p className="text-sm text-brand-100/70">Nutrióloga</p>
+          <p className="font-display text-xl italic text-white">Tu nutrióloga</p>
+          <p className="text-sm text-brand-100/70">Consultorio privado</p>
         </div>
       </div>
 
