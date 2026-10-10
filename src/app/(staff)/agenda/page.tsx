@@ -49,7 +49,7 @@ export default async function AgendaPage({ searchParams }: PageProps<"/agenda">)
       </div>
 
       <div className="flex flex-wrap items-center justify-between gap-3">
-        <div className="flex gap-1 rounded-lg border border-cream-200 bg-white p-1 text-sm">
+        <div className="flex gap-1 rounded-2xl border border-cream-200 bg-white shadow-soft p-1 text-sm">
           {(["dia", "semana", "mes"] as VistaAgenda[]).map((v) => (
             <Link
               key={v}
@@ -63,13 +63,13 @@ export default async function AgendaPage({ searchParams }: PageProps<"/agenda">)
           ))}
         </div>
         <div className="flex items-center gap-2 text-sm">
-          <Link href={`/agenda?vista=${vista}&fecha=${anterior}`} className="rounded-md border border-cream-200 bg-white p-1.5 hover:bg-cream-100">
+          <Link href={`/agenda?vista=${vista}&fecha=${anterior}`} className="rounded-xl border border-cream-200 bg-white p-1.5 hover:bg-cream-100">
             <ChevronLeft size={16} />
           </Link>
-          <Link href={`/agenda?vista=${vista}&fecha=${hoy}`} className="rounded-md border border-cream-200 bg-white px-3 py-1.5 hover:bg-cream-100">
+          <Link href={`/agenda?vista=${vista}&fecha=${hoy}`} className="rounded-xl border border-cream-200 bg-white px-3 py-1.5 hover:bg-cream-100">
             Hoy
           </Link>
-          <Link href={`/agenda?vista=${vista}&fecha=${siguiente}`} className="rounded-md border border-cream-200 bg-white p-1.5 hover:bg-cream-100">
+          <Link href={`/agenda?vista=${vista}&fecha=${siguiente}`} className="rounded-xl border border-cream-200 bg-white p-1.5 hover:bg-cream-100">
             <ChevronRight size={16} />
           </Link>
         </div>

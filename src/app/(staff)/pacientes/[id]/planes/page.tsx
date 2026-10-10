@@ -24,7 +24,7 @@ export default async function PlanesPacientePage({ params }: PageProps<"/pacient
       {planes.length === 0 ? (
         <p className="text-sm text-ink-soft">Sin planes todavía.</p>
       ) : (
-        <ul className="divide-y divide-cream-200 rounded-lg border border-cream-200 bg-white">
+        <ul className="divide-y divide-cream-200 rounded-2xl border border-cream-200 bg-white shadow-soft">
           {planes.map((p) => (
             <li key={p.id}>
               <Link href={`/planes/${p.id}`} className="flex items-center justify-between px-4 py-3 hover:bg-cream-100">

@@ -22,7 +22,7 @@ export default async function RutinasPacientePage({ params }: PageProps<"/pacien
       {rutinas.length === 0 ? (
         <p className="text-sm text-ink-soft">Sin rutinas todavía.</p>
       ) : (
-        <ul className="divide-y divide-cream-200 rounded-lg border border-cream-200 bg-white">
+        <ul className="divide-y divide-cream-200 rounded-2xl border border-cream-200 bg-white shadow-soft">
           {rutinas.map((r) => (
             <li key={r.id}>
               <Link href={`/rutinas/${r.id}`} className="flex items-center justify-between px-4 py-3 hover:bg-cream-100">

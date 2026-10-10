@@ -91,7 +91,7 @@ export function ConstructorPlan({ pacienteId, alimentos }: { pacienteId: string;
         ))}
       </datalist>
 
-      <div className="grid grid-cols-2 gap-4 rounded-lg border border-cream-200 bg-white p-4">
+      <div className="grid grid-cols-2 gap-4 rounded-2xl border border-cream-200 bg-white shadow-soft p-4">
         <Campo label="Nombre del plan" name="nombre">
           <Input name="nombre" value={nombre} onChange={(e) => setNombre(e.target.value)} />
         </Campo>
@@ -101,7 +101,7 @@ export function ConstructorPlan({ pacienteId, alimentos }: { pacienteId: string;
       </div>
 
       {dias.map((dia, dIdx) => (
-        <div key={dIdx} className="space-y-3 rounded-lg border border-cream-200 bg-white p-4">
+        <div key={dIdx} className="space-y-3 rounded-2xl border border-cream-200 bg-white shadow-soft p-4">
           <div className="flex items-center justify-between">
             <input
               value={dia.etiqueta}
@@ -127,7 +127,7 @@ export function ConstructorPlan({ pacienteId, alimentos }: { pacienteId: string;
           {dia.tiempos.map((tiempo, tIdx) => {
             const totales = totalesTiempo(tiempo.items);
             return (
-              <div key={tIdx} className="rounded-md border border-cream-100 p-3">
+              <div key={tIdx} className="rounded-xl border border-cream-100 p-3">
                 <div className="mb-2 flex items-center justify-between gap-2">
                   <input
                     value={tiempo.nombre}
@@ -174,7 +174,7 @@ export function ConstructorPlan({ pacienteId, alimentos }: { pacienteId: string;
                             return ds;
                           })
                         }
-                        className="flex-1 rounded-md border border-cream-200 px-2 py-1.5 text-sm"
+                        className="flex-1 rounded-xl border border-cream-200 px-2 py-1.5 text-sm"
                       >
                         <option value="">Selecciona un alimento…</option>
                         {alimentos.map((a) => (
@@ -194,7 +194,7 @@ export function ConstructorPlan({ pacienteId, alimentos }: { pacienteId: string;
                               return ds;
                             })
                           }
-                          className="w-full rounded-md border border-cream-200 py-1.5 pl-2 pr-6 text-sm"
+                          className="w-full rounded-xl border border-cream-200 py-1.5 pl-2 pr-6 text-sm"
                         />
                         <span className="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 text-xs text-ink-soft">
                           g

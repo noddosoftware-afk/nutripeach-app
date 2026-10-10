@@ -34,7 +34,7 @@ export default async function PlanDetallePage({ params }: PageProps<"/planes/[id
           </p>
         </div>
         <div className="flex gap-2">
-          <a href={`/planes/${id}/pdf`} target="_blank" rel="noreferrer" className="rounded-md border border-cream-200 px-3 py-1.5 text-sm hover:bg-cream-100">
+          <a href={`/planes/${id}/pdf`} target="_blank" rel="noreferrer" className="rounded-xl border border-cream-200 px-3 py-1.5 text-sm hover:bg-cream-100">
             Exportar PDF
           </a>
           {esNutriologa && plan.estado === "borrador" && (
@@ -61,10 +61,10 @@ export default async function PlanDetallePage({ params }: PageProps<"/planes/[id
       )}
 
       {(plan.plan_dias ?? []).map((dia) => (
-        <div key={dia.id} className="space-y-3 rounded-lg border border-cream-200 bg-white p-4">
+        <div key={dia.id} className="space-y-3 rounded-2xl border border-cream-200 bg-white shadow-soft p-4">
           <h2 className="text-sm font-semibold text-ink">{dia.etiqueta ?? `Día ${dia.numero_dia}`}</h2>
           {dia.plan_tiempos.map((tiempo) => (
-            <div key={tiempo.id} className="rounded-md border border-cream-100 p-3">
+            <div key={tiempo.id} className="rounded-xl border border-cream-100 p-3">
               <p className="mb-2 text-sm font-medium text-ink">{tiempo.nombre}</p>
               <ul className="space-y-1 text-sm text-ink-soft">
                 {tiempo.plan_items.map((item) => (

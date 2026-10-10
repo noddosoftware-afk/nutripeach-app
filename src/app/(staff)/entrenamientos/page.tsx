@@ -24,7 +24,7 @@ export default async function EntrenamientosPage() {
     <div className="space-y-6">
       <h1 className="font-display text-2xl font-semibold text-ink">Entrenamientos</h1>
 
-      <details className="rounded-lg border border-cream-200 bg-white p-4">
+      <details className="rounded-2xl border border-cream-200 bg-white shadow-soft p-4">
         <summary className="cursor-pointer text-sm font-semibold text-ink">+ Agregar ejercicio al catálogo</summary>
         <form action={crearEjercicioAction} className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-4">
           <Campo label="Nombre" name="nombre" className="col-span-2">

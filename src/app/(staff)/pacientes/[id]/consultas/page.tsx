@@ -24,7 +24,7 @@ export default async function ConsultasPage({ params }: PageProps<"/pacientes/[i
               | { valor: { imc: number; categoria: string } | null }
               | undefined;
             return (
-              <div key={c.id} className="rounded-lg border border-cream-200 bg-white p-4">
+              <div key={c.id} className="rounded-2xl border border-cream-200 bg-white shadow-soft p-4">
                 <div className="flex items-center justify-between">
                   <span className="text-sm font-medium">{new Date(c.fecha).toLocaleDateString("es-MX", { dateStyle: "long" })}</span>
                   <span className="text-xs text-ink-soft">{c.motivo ?? ""}</span>

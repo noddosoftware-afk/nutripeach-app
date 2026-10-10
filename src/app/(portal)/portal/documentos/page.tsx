@@ -20,7 +20,7 @@ export default async function PortalDocumentosPage() {
               const ultima = d.documento_versiones.sort((a, b) => b.numero_version - a.numero_version)[0];
               const url = ultima ? await urlFirmadaDocumento(ultima.storage_path) : null;
               return (
-                <li key={d.id} className="rounded-lg border border-cream-200 bg-white p-3">
+                <li key={d.id} className="rounded-2xl border border-cream-200 bg-white shadow-soft p-3">
                   <p className="text-sm font-medium">{d.nombre}</p>
                   <p className="text-xs text-ink-soft">{d.categoria}</p>
                   {url && (

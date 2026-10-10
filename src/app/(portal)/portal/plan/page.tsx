@@ -20,7 +20,7 @@ export default async function PortalPlanPage() {
       </div>
 
       {(plan.plan_dias ?? []).map((dia) => (
-        <div key={dia.id} className="space-y-2 rounded-lg border border-cream-200 bg-white p-4">
+        <div key={dia.id} className="space-y-2 rounded-2xl border border-cream-200 bg-white shadow-soft p-4">
           <h2 className="text-sm font-semibold text-ink">{dia.etiqueta ?? `Día ${dia.numero_dia}`}</h2>
           {dia.plan_tiempos.map((tiempo) => (
             <div key={tiempo.id}>

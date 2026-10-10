@@ -14,7 +14,7 @@ export default async function AlimentosPage({ searchParams }: PageProps<"/alimen
     <div className="space-y-6">
       <h1 className="font-display text-2xl font-semibold text-ink">Alimentos y recetas</h1>
 
-      <details className="rounded-lg border border-cream-200 bg-white p-4">
+      <details className="rounded-2xl border border-cream-200 bg-white shadow-soft p-4">
         <summary className="cursor-pointer text-sm font-semibold text-ink">+ Agregar alimento al catálogo</summary>
         <form action={crearAlimentoAction} className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-4">
           <Campo label="Nombre" name="nombre" className="col-span-2 sm:col-span-2">
@@ -73,7 +73,7 @@ export default async function AlimentosPage({ searchParams }: PageProps<"/alimen
           name="q"
           defaultValue={busqueda}
           placeholder="Buscar alimento…"
-          className="w-full rounded-lg border border-cream-200 bg-white py-2 pl-9 pr-3 text-sm focus:border-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-100"
+          className="w-full rounded-2xl border border-cream-200 bg-white shadow-soft py-2 pl-9 pr-3 text-sm focus:border-brand-600 focus:outline-none focus:ring-4 focus:ring-brand-100/60"
         />
       </form>
 

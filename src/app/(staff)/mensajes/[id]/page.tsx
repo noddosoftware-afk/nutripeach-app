@@ -28,7 +28,7 @@ export default async function ConversacionPage({ params }: PageProps<"/mensajes/
           name="cuerpo"
           required
           placeholder="Escribe un mensaje…"
-          className="flex-1 rounded-lg border border-cream-200 bg-white px-3 py-2 text-sm focus:border-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-100"
+          className="flex-1 rounded-2xl border border-cream-200 bg-white shadow-soft px-3 py-2 text-sm focus:border-brand-600 focus:outline-none focus:ring-4 focus:ring-brand-100/60"
         />
         <button className="flex items-center gap-1.5 rounded-lg bg-brand-700 px-4 py-2 text-sm font-medium text-white hover:bg-brand-800">
           <Send size={16} /> Enviar

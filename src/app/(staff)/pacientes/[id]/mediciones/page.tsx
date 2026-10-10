@@ -10,7 +10,7 @@ export default async function MedicionesPage({ params }: PageProps<"/pacientes/[
       {mediciones.length === 0 ? (
         <p className="text-sm text-ink-soft">Sin mediciones registradas todavía.</p>
       ) : (
-        <div className="overflow-x-auto rounded-lg border border-cream-200 bg-white">
+        <div className="overflow-x-auto rounded-2xl border border-cream-200 bg-white shadow-soft">
           <table className="w-full text-sm">
             <thead className="border-b border-cream-200 text-left text-ink-soft">
               <tr>

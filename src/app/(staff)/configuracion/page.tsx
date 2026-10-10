@@ -18,7 +18,7 @@ export default async function ConfiguracionPage() {
     <div className="max-w-2xl space-y-8">
       <div>
         <h1 className="text-xl font-semibold text-ink">Configuración del consultorio</h1>
-        <div className="mt-4 rounded-lg border border-cream-200 bg-white p-4 text-sm">
+        <div className="mt-4 rounded-2xl border border-cream-200 bg-white shadow-soft p-4 text-sm">
           <dl className="space-y-2">
             <div className="flex justify-between"><dt className="text-ink-soft">Nombre</dt><dd>{consultorio?.nombre}</dd></div>
             <div className="flex justify-between"><dt className="text-ink-soft">Zona horaria</dt><dd>{consultorio?.zona_horaria}</dd></div>

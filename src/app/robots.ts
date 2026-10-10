@@ -1,12 +1,13 @@
 import type { MetadataRoute } from "next";
 
-// Nutripeach es una app clínica privada: no hay páginas públicas que valga la pena
-// indexar, y no queremos que /login (ni URLs con ?next=... que revelen rutas
-// internas) aparezcan en resultados de búsqueda.
+// La landing pública en "/" sí debe indexarse; todo lo demás es la app
+// clínica privada (login, panel, portal) y no debe aparecer en buscadores.
+// "/$" ancla el permiso a la home exacta, "/" en disallow bloquea el resto.
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
       userAgent: "*",
+      allow: "/$",
       disallow: "/",
     },
   };

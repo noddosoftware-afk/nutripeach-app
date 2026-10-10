@@ -17,7 +17,7 @@ export function ServiciosManager({ servicios }: { servicios: Servicio[] }) {
       {servicios.length === 0 ? (
         <p className="text-sm text-ink-soft">Aún no hay servicios registrados.</p>
       ) : (
-        <div className="divide-y divide-cream-100 rounded-lg border border-cream-200 bg-white">
+        <div className="divide-y divide-cream-100 rounded-2xl border border-cream-200 bg-white shadow-soft">
           {servicios.map((s) => (
             <FilaServicio key={s.id} servicio={s} />
           ))}
@@ -101,7 +101,7 @@ function Formulario({ onListo }: { onListo: () => void }) {
   }
 
   return (
-    <form action={formAction} className="grid grid-cols-2 gap-3 rounded-lg border border-cream-200 bg-white p-4 sm:grid-cols-4">
+    <form action={formAction} className="grid grid-cols-2 gap-3 rounded-2xl border border-cream-200 bg-white shadow-soft p-4 sm:grid-cols-4">
       <Campo label="Nombre" name="nombre" className="col-span-2">
         <Input name="nombre" placeholder="Consulta de seguimiento" required />
       </Campo>

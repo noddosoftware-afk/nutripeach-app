@@ -34,7 +34,7 @@ export default async function PortalComparativasPage() {
       </p>
       <div className="space-y-3">
         {filas.map((f) => (
-          <div key={f.indicador} className="rounded-lg border border-cream-200 bg-white p-3">
+          <div key={f.indicador} className="rounded-2xl border border-cream-200 bg-white shadow-soft p-3">
             <p className="text-sm font-medium">{f.indicador}</p>
             <p className="text-sm text-ink-soft">
               {f.cambio.valorInicial ?? "—"} → {f.cambio.valorComparado ?? "—"} {f.unidad}

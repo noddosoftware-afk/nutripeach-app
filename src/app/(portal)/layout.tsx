@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { LogOut } from "lucide-react";
 import { redirect } from "next/navigation";
@@ -5,6 +6,8 @@ import { getSesionActual } from "@/data/auth";
 import { cerrarSesion } from "@/app/login/actions";
 import { Logo } from "@/components/logo";
 import { PortalNav } from "./portal-nav";
+
+export const metadata: Metadata = { robots: { index: false, follow: false } };
 
 export default async function PortalLayout({ children }: { children: ReactNode }) {
   const sesion = await getSesionActual();

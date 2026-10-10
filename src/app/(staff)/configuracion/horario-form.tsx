@@ -48,7 +48,7 @@ function Formulario({ horarioInicial, duracionInicial, onGuardado }: Props & { o
   }
 
   return (
-    <form action={formAction} className="space-y-4 rounded-lg border border-cream-200 bg-white p-4">
+    <form action={formAction} className="space-y-4 rounded-2xl border border-cream-200 bg-white shadow-soft p-4">
       <Campo label="Duración de cita por defecto (minutos)" name="duracion_cita_minutos" className="max-w-xs">
         <Input
           name="duracion_cita_minutos"
@@ -70,6 +70,7 @@ function Formulario({ horarioInicial, duracionInicial, onGuardado }: Props & { o
                 name={`${dia}_abierto`}
                 defaultChecked={abierto[dia]}
                 onChange={(e) => setAbierto((prev) => ({ ...prev, [dia]: e.target.checked }))}
+                className="h-4 w-4 accent-brand-700"
               />
               {ETIQUETA_DIA[dia]}
             </label>
@@ -79,14 +80,14 @@ function Formulario({ horarioInicial, duracionInicial, onGuardado }: Props & { o
                   type="time"
                   name={`${dia}_inicio`}
                   defaultValue={horarioInicial[dia]?.inicio ?? "09:00"}
-                  className="rounded-md border border-cream-200 px-2 py-1 text-sm"
+                  className="rounded-xl border border-cream-200 px-2 py-1 text-sm"
                 />
                 <span className="text-ink-soft">a</span>
                 <input
                   type="time"
                   name={`${dia}_fin`}
                   defaultValue={horarioInicial[dia]?.fin ?? "18:00"}
-                  className="rounded-md border border-cream-200 px-2 py-1 text-sm"
+                  className="rounded-xl border border-cream-200 px-2 py-1 text-sm"
                 />
               </div>
             ) : (

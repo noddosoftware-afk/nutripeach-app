@@ -25,10 +25,10 @@ export default async function ComparativasPage({ params, searchParams }: PagePro
           <form className="flex flex-wrap items-end gap-3">
             <SelectorFecha label="Fecha inicial" name="inicial" mediciones={mediciones} valor={inicialId} />
             <SelectorFecha label="Fecha comparada" name="comparada" mediciones={mediciones} valor={comparadaId} />
-            <button className="rounded-md border border-cream-200 px-4 py-2 text-sm hover:bg-cream-100">Comparar</button>
+            <button className="rounded-xl border border-cream-200 px-4 py-2 text-sm hover:bg-cream-100">Comparar</button>
           </form>
 
-          <div className="overflow-x-auto rounded-lg border border-cream-200 bg-white">
+          <div className="overflow-x-auto rounded-2xl border border-cream-200 bg-white shadow-soft">
             <table className="w-full text-sm">
               <thead className="border-b border-cream-200 text-left text-ink-soft">
                 <tr>
@@ -91,7 +91,7 @@ function SelectorFecha({
   return (
     <label className="text-sm">
       <span className="block text-ink">{label}</span>
-      <select name={name} defaultValue={valor} className="mt-1 rounded-md border border-cream-200 px-3 py-2 text-sm">
+      <select name={name} defaultValue={valor} className="mt-1 rounded-xl border border-cream-200 px-3 py-2 text-sm">
         {mediciones.map((m) => (
           <option key={m.id} value={m.id}>
             {new Date(m.fecha).toLocaleDateString("es-MX")}

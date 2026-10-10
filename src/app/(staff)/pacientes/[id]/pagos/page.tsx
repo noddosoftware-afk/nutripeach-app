@@ -18,7 +18,7 @@ export default async function PagosPacientePage({ params }: PageProps<"/paciente
 
   return (
     <div className="max-w-2xl space-y-6">
-      <div className="rounded-lg border border-cream-200 bg-white p-4">
+      <div className="rounded-2xl border border-cream-200 bg-white shadow-soft p-4">
         <h2 className="mb-3 text-sm font-semibold text-ink">Registrar pago</h2>
         <p className="mb-3 text-xs text-ink-soft">
           Registro manual — esto no procesa cobros ni tarjetas, solo lleva el control de lo ya recibido.
@@ -47,7 +47,7 @@ export default async function PagosPacientePage({ params }: PageProps<"/paciente
         </form>
       </div>
 
-      <div className="rounded-lg border border-cream-200 bg-white p-4">
+      <div className="rounded-2xl border border-cream-200 bg-white shadow-soft p-4">
         <div className="mb-2 flex items-center justify-between">
           <h2 className="text-sm font-semibold text-ink">Historial de pagos</h2>
           <span className="text-sm font-semibold text-brand-800">Total: ${total.toLocaleString("es-MX")} MXN</span>

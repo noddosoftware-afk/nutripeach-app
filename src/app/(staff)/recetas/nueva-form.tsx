@@ -9,7 +9,7 @@ export function NuevaRecetaForm({ alimentos }: { alimentos: Alimento[] }) {
   const [ingredientes, setIngredientes] = useState<{ alimento_id: string; gramos: number }[]>([]);
 
   return (
-    <form action={crearRecetaAction} className="space-y-4 rounded-lg border border-cream-200 bg-white p-4">
+    <form action={crearRecetaAction} className="space-y-4 rounded-2xl border border-cream-200 bg-white shadow-soft p-4">
       <input type="hidden" name="ingredientes" value={JSON.stringify(ingredientes)} />
       <div className="grid grid-cols-2 gap-4">
         <Campo label="Nombre de la receta" name="nombre">
@@ -32,7 +32,7 @@ export function NuevaRecetaForm({ alimentos }: { alimentos: Alimento[] }) {
               onChange={(e) =>
                 setIngredientes((prev) => prev.map((p, i) => (i === idx ? { ...p, alimento_id: e.target.value } : p)))
               }
-              className="flex-1 rounded-md border border-cream-200 px-2 py-1.5 text-sm"
+              className="flex-1 rounded-xl border border-cream-200 px-2 py-1.5 text-sm"
             >
               <option value="">Selecciona…</option>
               {alimentos.map((a) => (
@@ -48,7 +48,7 @@ export function NuevaRecetaForm({ alimentos }: { alimentos: Alimento[] }) {
                 setIngredientes((prev) => prev.map((p, i) => (i === idx ? { ...p, gramos: Number(e.target.value) || 0 } : p)))
               }
               placeholder="gramos"
-              className="w-28 rounded-md border border-cream-200 px-2 py-1.5 text-sm"
+              className="w-28 rounded-xl border border-cream-200 px-2 py-1.5 text-sm"
             />
             <button
               type="button"

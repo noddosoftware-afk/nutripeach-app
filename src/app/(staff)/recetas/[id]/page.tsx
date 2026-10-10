@@ -28,13 +28,13 @@ export default async function RecetaDetallePage({ params }: PageProps<"/recetas/
       </div>
 
       {receta.preparacion && (
-        <section className="rounded-lg border border-cream-200 bg-white p-4">
+        <section className="rounded-2xl border border-cream-200 bg-white shadow-soft p-4">
           <h2 className="mb-2 text-sm font-semibold text-ink">Preparación</h2>
           <p className="text-sm whitespace-pre-line">{receta.preparacion}</p>
         </section>
       )}
 
-      <section className="rounded-lg border border-cream-200 bg-white p-4">
+      <section className="rounded-2xl border border-cream-200 bg-white shadow-soft p-4">
         <h2 className="mb-2 text-sm font-semibold text-ink">Ingredientes</h2>
         <ul className="divide-y divide-cream-100 text-sm">
           {receta.ingredientes.map((ing) => (

@@ -39,13 +39,13 @@ export default async function RutinaDetallePage({ params }: PageProps<"/rutinas/
       {(rutina.rutina_dias ?? [])
         .sort((a, b) => a.numero_dia - b.numero_dia)
         .map((dia) => (
-          <div key={dia.id} className="space-y-3 rounded-lg border border-cream-200 bg-white p-4">
+          <div key={dia.id} className="space-y-3 rounded-2xl border border-cream-200 bg-white shadow-soft p-4">
             <h2 className="text-sm font-semibold text-ink">{dia.etiqueta ?? `Día ${dia.numero_dia}`}</h2>
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
               {dia.rutina_ejercicios
                 .sort((a, b) => a.orden - b.orden)
                 .map((re) => (
-                  <div key={re.id} className="flex gap-3 rounded-md border border-cream-100 p-2">
+                  <div key={re.id} className="flex gap-3 rounded-xl border border-cream-100 p-2">
                     <EjercicioVideo
                       src={re.ejercicio?.video_url ?? null}
                       alt={re.ejercicio?.nombre ?? ""}

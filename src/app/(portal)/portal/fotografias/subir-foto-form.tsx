@@ -26,10 +26,10 @@ function Formulario({ onListo }: { onListo: () => void }) {
   }
 
   return (
-    <form action={formAction} className="space-y-3 rounded-lg border border-cream-200 bg-white p-4">
+    <form action={formAction} className="space-y-3 rounded-2xl border border-cream-200 bg-white shadow-soft p-4">
       <p className="text-sm font-semibold text-ink">Subir foto de progreso</p>
       <input type="file" name="archivo" accept="image/*" capture="environment" required className="w-full text-sm" />
-      <select name="vista" className="w-full rounded-md border border-cream-200 px-2 py-1.5 text-sm">
+      <select name="vista" className="w-full rounded-xl border border-cream-200 px-2 py-1.5 text-sm">
         <option value="frente">Frente</option>
         <option value="perfil">Perfil</option>
         <option value="espalda">Espalda</option>

@@ -1,5 +1,7 @@
+import { FileText } from "lucide-react";
 import { listarDocumentos, urlFirmadaDocumento } from "@/data/documentos";
 import { subirDocumentoAction, subirVersionAction } from "./actions";
+import { Boton, EstadoVacio, Input, Select, Tarjeta } from "@/components/campo";
 
 const CATEGORIAS = [
   ["laboratorio", "Laboratorio"],
@@ -17,28 +19,35 @@ export default async function DocumentosPage({ params }: PageProps<"/pacientes/[
 
   return (
     <div className="space-y-6">
-      <form action={subir} className="grid grid-cols-2 gap-3 rounded-lg border border-cream-200 bg-white p-4 sm:grid-cols-5">
-        <input type="file" name="archivo" required className="col-span-2 text-sm sm:col-span-1" />
-        <input type="text" name="nombre" placeholder="Nombre del documento" className="rounded-md border border-cream-200 px-2 py-1.5 text-sm" />
-        <select name="categoria" className="rounded-md border border-cream-200 px-2 py-1.5 text-sm">
-          {CATEGORIAS.map(([v, l]) => (
-            <option key={v} value={v}>
-              {l}
-            </option>
-          ))}
-        </select>
-        <label className="flex items-center gap-2 text-xs text-ink-soft">
-          <input type="checkbox" name="compartir" /> Compartir con el paciente
-        </label>
-        <button className="col-span-2 rounded-md bg-brand-700 px-3 py-1.5 text-sm text-white hover:bg-brand-800 sm:col-span-5">
-          Subir documento
-        </button>
-      </form>
+      <Tarjeta className="p-4">
+        <form action={subir} className="grid grid-cols-2 gap-3 sm:grid-cols-5">
+          <input
+            type="file"
+            name="archivo"
+            required
+            className="col-span-2 text-sm text-ink-soft file:mr-3 file:rounded-xl file:border-0 file:bg-brand-50 file:px-3 file:py-1.5 file:text-sm file:font-medium file:text-brand-800 sm:col-span-1"
+          />
+          <Input type="text" name="nombre" placeholder="Nombre del documento" />
+          <Select name="categoria">
+            {CATEGORIAS.map(([v, l]) => (
+              <option key={v} value={v}>
+                {l}
+              </option>
+            ))}
+          </Select>
+          <label className="flex items-center gap-2 text-xs text-ink-soft">
+            <input type="checkbox" name="compartir" className="h-4 w-4 accent-brand-700" /> Compartir con el paciente
+          </label>
+          <Boton type="submit" className="col-span-2 sm:col-span-5">
+            Subir documento
+          </Boton>
+        </form>
+      </Tarjeta>
 
       {documentos.length === 0 ? (
-        <p className="text-sm text-ink-soft">Sin documentos todavía.</p>
+        <EstadoVacio icon={FileText} titulo="Sin documentos todavía." />
       ) : (
-        <ul className="divide-y divide-cream-200 rounded-lg border border-cream-200 bg-white">
+        <ul className="divide-y divide-cream-200 overflow-hidden rounded-2xl border border-cream-200 bg-white">
           {await Promise.all(
             documentos.map(async (d) => {
               const ultima = d.documento_versiones.sort((a, b) => b.numero_version - a.numero_version)[0];

@@ -55,7 +55,7 @@ export function NuevaConsultaForm({
   return (
     <form action={formAction} className="grid gap-6 lg:grid-cols-2">
       <div className="space-y-6">
-        <fieldset className="rounded-lg border border-cream-200 bg-white p-4">
+        <fieldset className="rounded-2xl border border-cream-200 bg-white shadow-soft p-4">
           <legend className="px-1 text-sm font-semibold text-ink">Consulta</legend>
           <div className="space-y-4">
             <Campo label="Motivo" name="motivo">
@@ -76,7 +76,7 @@ export function NuevaConsultaForm({
           </div>
         </fieldset>
 
-        <fieldset className="rounded-lg border border-cream-200 bg-white p-4">
+        <fieldset className="rounded-2xl border border-cream-200 bg-white shadow-soft p-4">
           <legend className="px-1 text-sm font-semibold text-ink">Mediciones</legend>
           <div className="grid grid-cols-2 gap-4">
             <Campo label="Peso (kg)" name="peso_kg">
@@ -100,7 +100,7 @@ export function NuevaConsultaForm({
           </div>
         </fieldset>
 
-        <fieldset className="rounded-lg border border-cream-200 bg-white p-4">
+        <fieldset className="rounded-2xl border border-cream-200 bg-white shadow-soft p-4">
           <legend className="px-1 text-sm font-semibold text-ink">Cálculos nutricionales</legend>
           <div className="space-y-4">
             <div className="grid grid-cols-2 gap-4">

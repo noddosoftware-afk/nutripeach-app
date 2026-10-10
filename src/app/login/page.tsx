@@ -1,5 +1,8 @@
+import type { Metadata } from "next";
 import { LoginForm } from "./login-form";
 import { Logo } from "@/components/logo";
+
+export const metadata: Metadata = { robots: { index: false, follow: false } };
 
 export default async function LoginPage({ searchParams }: PageProps<"/login">) {
   const params = await searchParams;

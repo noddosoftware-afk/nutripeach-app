@@ -12,9 +12,23 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://nutrinani-app.vercel.app"),
   title: "Nutripeach",
   description: "Plataforma clínica para el consultorio de nutrición de Daniela",
-  robots: { index: false, follow: false },
+  openGraph: {
+    title: "Nutripeach — Consultorio privado de nutrición",
+    description:
+      "Daniela Balandrán acompaña a sus pacientes con planes de alimentación, entrenamientos y seguimiento personalizados, todo desde un solo lugar.",
+    siteName: "Nutripeach",
+    locale: "es_MX",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Nutripeach — Consultorio privado de nutrición",
+    description:
+      "Daniela Balandrán acompaña a sus pacientes con planes de alimentación, entrenamientos y seguimiento personalizados.",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

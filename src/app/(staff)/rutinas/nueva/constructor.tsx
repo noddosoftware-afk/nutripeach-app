@@ -58,7 +58,7 @@ export function ConstructorRutina({ pacienteId, ejercicios }: { pacienteId: stri
     <form action={accion} className="space-y-6">
       <input type="hidden" name="estructura" value={JSON.stringify(estructura)} />
 
-      <div className="grid grid-cols-1 gap-4 rounded-lg border border-cream-200 bg-white p-4 sm:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 rounded-2xl border border-cream-200 bg-white shadow-soft p-4 sm:grid-cols-2">
         <Campo label="Nombre de la rutina" name="nombre">
           <Input name="nombre" value={nombre} onChange={(e) => setNombre(e.target.value)} />
         </Campo>
@@ -68,7 +68,7 @@ export function ConstructorRutina({ pacienteId, ejercicios }: { pacienteId: stri
       </div>
 
       {dias.map((dia, dIdx) => (
-        <div key={dIdx} className="space-y-3 rounded-lg border border-cream-200 bg-white p-4">
+        <div key={dIdx} className="space-y-3 rounded-2xl border border-cream-200 bg-white shadow-soft p-4">
           <div className="flex items-center justify-between">
             <input
               value={dia.etiqueta}
@@ -111,7 +111,7 @@ export function ConstructorRutina({ pacienteId, ejercicios }: { pacienteId: stri
                       return ds;
                     })
                   }
-                  className="flex-1 rounded-md border border-cream-200 px-2 py-1.5 text-sm"
+                  className="flex-1 rounded-xl border border-cream-200 px-2 py-1.5 text-sm"
                 >
                   <option value="">Selecciona un ejercicio…</option>
                   {gruposOrdenados.map(([grupo, lista]) => (
@@ -134,7 +134,7 @@ export function ConstructorRutina({ pacienteId, ejercicios }: { pacienteId: stri
                       return ds;
                     })
                   }
-                  className="w-16 rounded-md border border-cream-200 px-2 py-1.5 text-sm"
+                  className="w-16 rounded-xl border border-cream-200 px-2 py-1.5 text-sm"
                 />
                 <input
                   value={item.repeticiones}
@@ -144,7 +144,7 @@ export function ConstructorRutina({ pacienteId, ejercicios }: { pacienteId: stri
                       return ds;
                     })
                   }
-                  className="w-20 rounded-md border border-cream-200 px-2 py-1.5 text-sm"
+                  className="w-20 rounded-xl border border-cream-200 px-2 py-1.5 text-sm"
                 />
                 <input
                   type="number"
@@ -156,7 +156,7 @@ export function ConstructorRutina({ pacienteId, ejercicios }: { pacienteId: stri
                       return ds;
                     })
                   }
-                  className="w-20 rounded-md border border-cream-200 px-2 py-1.5 text-sm"
+                  className="w-20 rounded-xl border border-cream-200 px-2 py-1.5 text-sm"
                 />
                 <button
                   type="button"

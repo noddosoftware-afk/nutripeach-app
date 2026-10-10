@@ -1,5 +1,7 @@
+import { Users, Stethoscope, ClipboardList } from "lucide-react";
 import { requireStaff } from "@/data/auth";
 import { createClient } from "@/lib/supabase/server";
+import { Tarjeta } from "@/components/campo";
 
 export default async function ReportesPage() {
   await requireStaff();
@@ -10,26 +12,35 @@ export default async function ReportesPage() {
     supabase.from("planes").select("id", { count: "exact", head: true }).eq("estado", "publicado"),
   ]);
 
+  const metricas = [
+    { icon: Users, titulo: "Pacientes activos", valor: totalPacientes ?? 0 },
+    { icon: Stethoscope, titulo: "Consultas registradas", valor: totalConsultas ?? 0 },
+    { icon: ClipboardList, titulo: "Planes publicados", valor: totalPlanesPublicados ?? 0 },
+  ];
+
   return (
     <div className="space-y-6">
-      <h1 className="text-xl font-semibold text-ink">Reportes</h1>
-      <p className="text-sm text-ink-soft">
-        Reportes avanzados (adherencia, resultados por periodo, exportación consolidada) están planeados para la Fase
-        3. Estos son los conteos básicos disponibles hoy.
-      </p>
-      <div className="grid grid-cols-3 gap-4">
-        <div className="rounded-lg border border-cream-200 bg-white p-4">
-          <p className="text-sm text-ink-soft">Pacientes activos</p>
-          <p className="text-2xl font-semibold">{totalPacientes ?? 0}</p>
-        </div>
-        <div className="rounded-lg border border-cream-200 bg-white p-4">
-          <p className="text-sm text-ink-soft">Consultas registradas</p>
-          <p className="text-2xl font-semibold">{totalConsultas ?? 0}</p>
-        </div>
-        <div className="rounded-lg border border-cream-200 bg-white p-4">
-          <p className="text-sm text-ink-soft">Planes publicados</p>
-          <p className="text-2xl font-semibold">{totalPlanesPublicados ?? 0}</p>
-        </div>
+      <div>
+        <h1 className="font-display text-2xl text-brand-900">Reportes</h1>
+        <p className="mt-1 text-sm text-ink-soft">
+          Reportes avanzados (adherencia, resultados por periodo, exportación consolidada) están planeados para la
+          Fase 3. Estos son los conteos básicos disponibles hoy.
+        </p>
+      </div>
+      <div className="grid gap-4 sm:grid-cols-3">
+        {metricas.map((m) => (
+          <Tarjeta key={m.titulo} className="p-4">
+            <div className="flex items-center gap-3">
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-50 text-brand-700">
+                <m.icon size={20} />
+              </div>
+              <div>
+                <p className="text-sm text-ink-soft">{m.titulo}</p>
+                <p className="text-2xl font-semibold text-ink">{m.valor}</p>
+              </div>
+            </div>
+          </Tarjeta>
+        ))}
       </div>
     </div>
   );

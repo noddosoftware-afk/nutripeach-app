@@ -109,7 +109,7 @@ function SelectorFoto({
       <select
         value={valor}
         onChange={(e) => onChange(e.target.value)}
-        className="mt-1 rounded-md border border-cream-200 px-3 py-2 text-sm"
+        className="mt-1 rounded-xl border border-cream-200 px-3 py-2 text-sm"
       >
         {fotos.map((f) => (
           <option key={f.id} value={f.id}>

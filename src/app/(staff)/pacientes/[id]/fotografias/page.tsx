@@ -1,6 +1,8 @@
+import { Camera } from "lucide-react";
 import { listarFotografias, urlFirmadaFoto } from "@/data/fotografias";
 import { subirFotografiaAction } from "./actions";
 import { ComparadorFotos } from "./comparador";
+import { Boton, EstadoVacio, Input, Select, Tarjeta } from "@/components/campo";
 
 export default async function FotografiasPage({ params }: PageProps<"/pacientes/[id]/fotografias">) {
   const { id } = await params;
@@ -13,26 +15,34 @@ export default async function FotografiasPage({ params }: PageProps<"/pacientes/
 
   return (
     <div className="space-y-6">
-      <form action={accion} className="grid grid-cols-2 gap-3 rounded-lg border border-cream-200 bg-white p-4 sm:grid-cols-5">
-        <input type="file" name="archivo" accept="image/*" required className="col-span-2 text-sm sm:col-span-1" />
-        <select name="vista" className="rounded-md border border-cream-200 px-2 py-1.5 text-sm">
-          <option value="frente">Frente</option>
-          <option value="perfil">Perfil</option>
-          <option value="espalda">Espalda</option>
-          <option value="otra">Otra</option>
-        </select>
-        <input type="date" name="fecha_captura" required className="rounded-md border border-cream-200 px-2 py-1.5 text-sm" />
-        <input type="text" name="observaciones" placeholder="Observaciones" className="rounded-md border border-cream-200 px-2 py-1.5 text-sm" />
-        <label className="flex items-center gap-2 text-xs text-ink-soft">
-          <input type="checkbox" name="compartir" /> Compartir con el paciente
-        </label>
-        <button className="col-span-2 rounded-md bg-brand-700 px-3 py-1.5 text-sm text-white hover:bg-brand-800 sm:col-span-5">
-          Subir fotografía
-        </button>
-      </form>
+      <Tarjeta className="p-4">
+        <form action={accion} className="grid grid-cols-2 gap-3 sm:grid-cols-5">
+          <input
+            type="file"
+            name="archivo"
+            accept="image/*"
+            required
+            className="col-span-2 text-sm text-ink-soft file:mr-3 file:rounded-xl file:border-0 file:bg-brand-50 file:px-3 file:py-1.5 file:text-sm file:font-medium file:text-brand-800 sm:col-span-1"
+          />
+          <Select name="vista">
+            <option value="frente">Frente</option>
+            <option value="perfil">Perfil</option>
+            <option value="espalda">Espalda</option>
+            <option value="otra">Otra</option>
+          </Select>
+          <Input type="date" name="fecha_captura" required />
+          <Input type="text" name="observaciones" placeholder="Observaciones" />
+          <label className="flex items-center gap-2 text-xs text-ink-soft">
+            <input type="checkbox" name="compartir" className="h-4 w-4 accent-brand-700" /> Compartir con el paciente
+          </label>
+          <Boton type="submit" className="col-span-2 sm:col-span-5">
+            Subir fotografía
+          </Boton>
+        </form>
+      </Tarjeta>
 
       {fotosConUrl.length === 0 ? (
-        <p className="text-sm text-ink-soft">Sin fotografías de progreso todavía.</p>
+        <EstadoVacio icon={Camera} titulo="Sin fotografías de progreso todavía." />
       ) : (
         <ComparadorFotos fotos={fotosConUrl} />
       )}
