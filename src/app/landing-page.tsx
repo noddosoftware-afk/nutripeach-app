@@ -123,11 +123,19 @@ export function LandingPage() {
         </section>
 
         {/* Funcionalidades */}
-        <section id="funcionalidades" className="bg-cream-100/60 py-20 sm:py-28">
-          <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
+        <section id="funcionalidades" className="relative overflow-hidden py-20 sm:py-28">
+          <Image
+            src="/landing/funcionalidades-bg.jpg"
+            alt="Rack de mancuernas en un gimnasio con iluminación cálida y dramática"
+            fill
+            sizes="100vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-black/45" />
+          <div className="relative mx-auto w-full max-w-7xl px-5 sm:px-8">
             <div className="mx-auto max-w-2xl text-center">
-              <p className="text-sm font-medium uppercase tracking-[0.25em] text-brand-700">Qué incluye</p>
-              <h2 className="mt-3 font-display text-3xl italic text-brand-900 sm:text-4xl">
+              <p className="text-sm font-medium uppercase tracking-[0.25em] text-brand-100">Qué incluye</p>
+              <h2 className="mt-3 font-display text-3xl italic text-white sm:text-4xl">
                 Todo tu acompañamiento, en un solo lugar
               </h2>
             </div>
@@ -190,7 +198,7 @@ export function LandingPage() {
             sizes="100vw"
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-brand-900/55" />
+          <div className="absolute inset-0 bg-black/45" />
           <div className="relative mx-auto flex w-full max-w-3xl flex-col items-center px-5 text-center sm:px-8">
             <p className="font-display text-2xl italic leading-relaxed text-white sm:text-3xl">
               &ldquo;No se trata de reglas estrictas, sino de construir un hábito que puedas sostener.&rdquo;
@@ -198,9 +206,40 @@ export function LandingPage() {
           </div>
         </section>
 
+        {/* Marcas aliadas */}
+        <section className="relative overflow-hidden py-20 sm:py-28">
+          <Image
+            src="/landing/ecosistema-bg.jpg"
+            alt="Duraznos frescos, proteína en polvo y una pesa rusa sobre una superficie oscura"
+            fill
+            sizes="100vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-black/45" />
+          <div className="relative mx-auto w-full max-w-7xl px-5 sm:px-8">
+            <div className="mx-auto max-w-2xl text-center">
+              <p className="text-sm font-medium uppercase tracking-[0.25em] text-brand-100">Ecosistema</p>
+              <h2 className="mt-3 font-display text-3xl italic text-white sm:text-4xl">
+                Parte de una red más grande
+              </h2>
+            </div>
+            <div className="mt-14">
+              <MarcasDestacadas />
+            </div>
+          </div>
+        </section>
+
         {/* CTA final */}
-        <section className="bg-brand-900 py-20 text-white sm:py-24">
-          <div className="mx-auto flex w-full max-w-3xl flex-col items-center gap-6 px-5 text-center sm:px-8">
+        <section className="relative overflow-hidden py-20 text-white sm:py-24">
+          <Image
+            src="/landing/cta-bg.jpg"
+            alt="Mancuerna sobre una banca de madera oscura con luz cálida entrando por una ventana"
+            fill
+            sizes="100vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-black/45" />
+          <div className="relative mx-auto flex w-full max-w-3xl flex-col items-center gap-6 px-5 text-center sm:px-8">
             <h2 className="font-display text-3xl italic sm:text-4xl">¿Ya eres paciente del consultorio?</h2>
             <p className="max-w-md text-brand-100/80">
               Accede a tu portal para revisar tu plan, tu progreso y tus próximas consultas.
@@ -212,20 +251,6 @@ export function LandingPage() {
               <a href="#funcionalidades" className={botonSecundarioOscuro}>
                 Ver funcionalidades
               </a>
-            </div>
-          </div>
-        </section>
-        {/* Marcas aliadas */}
-        <section className="bg-cream-100/60 py-20 sm:py-28">
-          <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
-            <div className="mx-auto max-w-2xl text-center">
-              <p className="text-sm font-medium uppercase tracking-[0.25em] text-brand-700">Ecosistema</p>
-              <h2 className="mt-3 font-display text-3xl italic text-brand-900 sm:text-4xl">
-                Parte de una red más grande
-              </h2>
-            </div>
-            <div className="mt-14">
-              <MarcasDestacadas />
             </div>
           </div>
         </section>
