@@ -9,6 +9,7 @@ import {
   CalendarDays,
 } from "lucide-react";
 import { Logo } from "@/components/logo";
+import { MarcasAliadas } from "@/components/marcas-aliadas";
 
 const FUNCIONALIDADES = [
   {
@@ -212,6 +213,15 @@ export function LandingPage() {
                 Ver funcionalidades
               </a>
             </div>
+          </div>
+        </section>
+        {/* Marcas aliadas */}
+        <section className="py-14 sm:py-16">
+          <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
+            <p className="mb-6 text-center text-xs font-medium uppercase tracking-[0.25em] text-ink-soft">
+              En colaboración con
+            </p>
+            <MarcasAliadas />
           </div>
         </section>
       </main>

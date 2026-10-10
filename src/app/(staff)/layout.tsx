@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import { redirect } from "next/navigation";
 import { getSesionActual } from "@/data/auth";
 import { Logo } from "@/components/logo";
+import { MarcasAliadas } from "@/components/marcas-aliadas";
 import { StaffSidebar, StaffMobileNav } from "./staff-nav";
 
 export const metadata: Metadata = { robots: { index: false, follow: false } };
@@ -26,6 +27,10 @@ export default async function StaffLayout({ children }: { children: ReactNode })
         </header>
 
         <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-6 sm:px-6 lg:px-10 lg:py-10">{children}</main>
+
+        <footer className="border-t border-cream-200 py-5">
+          <MarcasAliadas />
+        </footer>
       </div>
     </div>
   );

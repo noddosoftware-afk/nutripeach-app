@@ -1,24 +1,25 @@
 @import "tailwindcss";
 
 :root {
-  /* Identidad Nutripeach: paleta durazno — cálida, frutal, luminosa.
+  /* Identidad Nutripeach (logo real): verde oscuro del wordmark como color
+     principal de acción/texto, durazno del ícono como acento cálido.
      Mismos nombres de token que antes para que el resto de la app herede sin tocar archivos. */
-  --color-cream: #fff8f2;
-  --color-cream-100: #fdebda;
-  --color-cream-200: #f1dcc4;
-  --color-ink: #5a3a22;
-  --color-ink-soft: #9c7a5c;
+  --color-cream: #fbf9f5;
+  --color-cream-100: #f4efe6;
+  --color-cream-200: #e6ddcd;
+  --color-ink: #1f2e22;
+  --color-ink-soft: #6b7a6c;
 
-  --color-brand-50: #fde6d0;
-  --color-brand-100: #f6c293;
-  --color-brand-400: #f2a468;
-  --color-brand-600: #e8823d;
-  --color-brand-700: #d9641f;
-  --color-brand-800: #b9501a;
-  --color-brand-900: #4a2a16;
+  --color-brand-50: #fdeae0;
+  --color-brand-100: #fcceb7;
+  --color-brand-400: #fd8156;
+  --color-brand-600: #2e8215;
+  --color-brand-700: #1b5e12;
+  --color-brand-800: #124010;
+  --color-brand-900: #03341a;
 
-  --color-accent: #f2936b;
-  --color-accent-soft: #f8c9a8;
+  --color-accent: #fd663c;
+  --color-accent-soft: #fcceb7;
 
   --background: var(--color-cream);
   --foreground: var(--color-ink);

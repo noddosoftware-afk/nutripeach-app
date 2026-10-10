@@ -5,6 +5,7 @@ import { redirect } from "next/navigation";
 import { getSesionActual } from "@/data/auth";
 import { cerrarSesion } from "@/app/login/actions";
 import { Logo } from "@/components/logo";
+import { MarcasAliadas } from "@/components/marcas-aliadas";
 import { PortalNav } from "./portal-nav";
 
 export const metadata: Metadata = { robots: { index: false, follow: false } };
@@ -32,7 +33,12 @@ export default async function PortalLayout({ children }: { children: ReactNode }
         <p className="mt-1 text-sm text-ink-soft">Hola, {sesion.nombreCompleto.split(" ")[0]}</p>
       </header>
 
-      <main className="flex-1 px-4 py-4 pb-20">{children}</main>
+      <main className="flex-1 px-4 py-4 pb-20">
+        {children}
+        <footer className="mt-10 border-t border-cream-200 pt-6">
+          <MarcasAliadas />
+        </footer>
+      </main>
 
       <PortalNav />
     </div>
