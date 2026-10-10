@@ -17,7 +17,7 @@ export default async function PortalLayout({ children }: { children: ReactNode }
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Logo size={28} />
-            <span className="font-display text-lg font-semibold text-brand-900">NutriNani</span>
+            <span className="font-display text-lg font-semibold text-brand-900">Nutripeach</span>
           </div>
           <form action={cerrarSesion}>
             <button className="flex items-center gap-1 text-sm text-brand-700 hover:underline">

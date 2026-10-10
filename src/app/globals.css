@@ -1,25 +1,24 @@
 @import "tailwindcss";
 
 :root {
-  /* Identidad premium de Daniela Balandran: marfil y neutros cálidos como base,
-     café elegante como color de acción, rosa empolvado/nude como acentos sutiles.
-     Sin verdes de nutrición, sin saturación — consultorio privado, no SaaS genérico. */
-  --color-cream: #faf7f4;
-  --color-cream-100: #f5efeb;
-  --color-cream-200: #e8deda;
-  --color-ink: #574a45;
-  --color-ink-soft: #8d817b;
+  /* Identidad Nutripeach: paleta durazno — cálida, frutal, luminosa.
+     Mismos nombres de token que antes para que el resto de la app herede sin tocar archivos. */
+  --color-cream: #fff8f2;
+  --color-cream-100: #fdebda;
+  --color-cream-200: #f1dcc4;
+  --color-ink: #5a3a22;
+  --color-ink-soft: #9c7a5c;
 
-  --color-brand-50: #f8f1ef;
-  --color-brand-100: #e6c8c5;
-  --color-brand-400: #d8c0b5;
-  --color-brand-600: #9b8277;
-  --color-brand-700: #574a45;
-  --color-brand-800: #463b37;
-  --color-brand-900: #382f2c;
+  --color-brand-50: #fde6d0;
+  --color-brand-100: #f6c293;
+  --color-brand-400: #f2a468;
+  --color-brand-600: #e8823d;
+  --color-brand-700: #d9641f;
+  --color-brand-800: #b9501a;
+  --color-brand-900: #4a2a16;
 
-  --color-accent: #cfa6a3;
-  --color-accent-soft: #e6c8c5;
+  --color-accent: #f2936b;
+  --color-accent-soft: #f8c9a8;
 
   --background: var(--color-cream);
   --foreground: var(--color-ink);

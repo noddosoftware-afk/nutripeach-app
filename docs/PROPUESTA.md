@@ -1,6 +1,6 @@
-# NutriNani — Propuesta y estado del proyecto
+# Nutripeach — Propuesta y estado del proyecto
 
-Plataforma clínica para el consultorio de nutrición de **Daniela**. Nombre del proyecto: **NutriNani**
+Plataforma clínica para el consultorio de nutrición de **Daniela**. Nombre del proyecto: **Nutripeach**
 (Nani = apodo de Daniela + Nutrición).
 
 ## 1. Resumen de la solución

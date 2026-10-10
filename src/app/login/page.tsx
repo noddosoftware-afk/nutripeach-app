@@ -15,7 +15,7 @@ export default async function LoginPage({ searchParams }: PageProps<"/login">) {
           <div className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 ring-1 ring-white/20">
             <Logo size={24} />
           </div>
-          <span className="font-display text-lg tracking-wide">NutriNani</span>
+          <span className="font-display text-lg tracking-wide">Nutripeach</span>
         </div>
 
         <div className="relative max-w-md py-12 lg:py-0">
@@ -38,7 +38,7 @@ export default async function LoginPage({ searchParams }: PageProps<"/login">) {
           <div className="mb-10 lg:hidden">
             <div className="mb-6 flex items-center gap-2.5">
               <Logo size={30} />
-              <span className="font-display text-lg font-semibold text-brand-900">NutriNani</span>
+              <span className="font-display text-lg font-semibold text-brand-900">Nutripeach</span>
             </div>
             <h1 className="font-display text-3xl italic text-brand-900">Bienvenida</h1>
           </div>

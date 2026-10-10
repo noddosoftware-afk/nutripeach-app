@@ -12,7 +12,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "NutriNani",
+  title: "Nutripeach",
   description: "Plataforma clínica para el consultorio de nutrición de Daniela",
   robots: { index: false, follow: false },
 };

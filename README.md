@@ -1,4 +1,4 @@
-# NutriNani
+# Nutripeach
 
 Plataforma clínica para el consultorio de nutrición de Daniela. Ver `docs/PROPUESTA.md` para el
 resumen completo (arquitectura, supuestos, matriz de funciones, plan de fases).
@@ -42,10 +42,10 @@ Next.js 16 (App Router) + TypeScript + Tailwind CSS 4 + Supabase (Postgres, Auth
    npm run seed
    ```
 
-   Crea tres cuentas de prueba, todas con contraseña `DemoNutriNani123!`:
-   - `daniela@nutrinani.demo` (nutrióloga)
-   - `asistente@nutrinani.demo` (asistente)
-   - `paciente1@nutrinani.demo` (portal del paciente)
+   Crea tres cuentas de prueba, todas con contraseña `DemoNutripeach123!`:
+   - `daniela@nutripeach.demo` (nutrióloga)
+   - `asistente@nutripeach.demo` (asistente)
+   - `paciente1@nutripeach.demo` (portal del paciente)
 
 5. Correr en desarrollo:
 

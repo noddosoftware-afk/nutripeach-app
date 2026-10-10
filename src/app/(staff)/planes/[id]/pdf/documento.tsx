@@ -17,7 +17,7 @@ export function PlanPDF({ plan }: { plan: Plan }) {
   return (
     <Document>
       <Page size="LETTER" style={styles.page}>
-        <Text style={styles.titulo}>NutriNani — {plan.nombre}</Text>
+        <Text style={styles.titulo}>Nutripeach — {plan.nombre}</Text>
         <Text style={styles.subtitulo}>
           {plan.objetivo_kcal ? `Objetivo: ${plan.objetivo_kcal} kcal/día · ` : ""}
           Generado el {new Date().toLocaleDateString("es-MX", { dateStyle: "long" })}
@@ -48,7 +48,7 @@ export function PlanPDF({ plan }: { plan: Plan }) {
         )}
 
         <Text style={styles.pie}>
-          Este documento fue generado por NutriNani para uso exclusivo del paciente. Consulta cualquier duda con tu
+          Este documento fue generado por Nutripeach para uso exclusivo del paciente. Consulta cualquier duda con tu
           nutrióloga antes de modificar el plan.
         </Text>
       </Page>

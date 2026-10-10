@@ -31,8 +31,8 @@ async function main() {
 
   // --- Nutrióloga (Daniela) -------------------------------------------------
   const { data: authDaniela, error: errDaniela } = await supabase.auth.admin.createUser({
-    email: "daniela@nutrinani.demo",
-    password: "DemoNutriNani123!",
+    email: "daniela@nutripeach.demo",
+    password: "DemoNutripeach123!",
     email_confirm: true,
   });
   if (errDaniela) throw errDaniela;
@@ -46,8 +46,8 @@ async function main() {
 
   // --- Asistente ficticia ----------------------------------------------------
   const { data: authAsistente, error: errAsistente } = await supabase.auth.admin.createUser({
-    email: "asistente@nutrinani.demo",
-    password: "DemoNutriNani123!",
+    email: "asistente@nutripeach.demo",
+    password: "DemoNutripeach123!",
     email_confirm: true,
   });
   if (errAsistente) throw errAsistente;
@@ -68,7 +68,7 @@ async function main() {
       fecha_nacimiento: "1992-04-12",
       sexo: "femenino",
       telefono: "5555555555",
-      email: "paciente1@nutrinani.demo",
+      email: "paciente1@nutripeach.demo",
       objetivos: "Mejorar hábitos alimenticios y composición corporal (dato de demostración).",
       creado_por: authDaniela.user.id,
     })
@@ -77,8 +77,8 @@ async function main() {
   if (errPaciente) throw errPaciente;
 
   const { data: authPaciente, error: errAuthPaciente } = await supabase.auth.admin.createUser({
-    email: "paciente1@nutrinani.demo",
-    password: "DemoNutriNani123!",
+    email: "paciente1@nutripeach.demo",
+    password: "DemoNutripeach123!",
     email_confirm: true,
   });
   if (errAuthPaciente) throw errAuthPaciente;
@@ -183,10 +183,10 @@ async function main() {
     { receta_id: receta.id, alimento_id: brocoli.id, gramos: 100, orden: 2 },
   ]);
 
-  console.log("Listo. Cuentas de demostración (contraseña: DemoNutriNani123!):");
-  console.log("  Nutrióloga: daniela@nutrinani.demo");
-  console.log("  Asistente:  asistente@nutrinani.demo");
-  console.log("  Paciente:   paciente1@nutrinani.demo");
+  console.log("Listo. Cuentas de demostración (contraseña: DemoNutripeach123!):");
+  console.log("  Nutrióloga: daniela@nutripeach.demo");
+  console.log("  Asistente:  asistente@nutripeach.demo");
+  console.log("  Paciente:   paciente1@nutripeach.demo");
 }
 
 main().catch((err) => {
