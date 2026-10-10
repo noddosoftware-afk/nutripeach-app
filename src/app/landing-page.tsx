@@ -9,7 +9,7 @@ import {
   CalendarDays,
 } from "lucide-react";
 import { Logo } from "@/components/logo";
-import { MarcasAliadas } from "@/components/marcas-aliadas";
+import { MarcasDestacadas } from "@/components/marcas-destacadas";
 
 const FUNCIONALIDADES = [
   {
@@ -216,12 +216,17 @@ export function LandingPage() {
           </div>
         </section>
         {/* Marcas aliadas */}
-        <section className="py-14 sm:py-16">
+        <section className="bg-cream-100/60 py-20 sm:py-28">
           <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
-            <p className="mb-6 text-center text-xs font-medium uppercase tracking-[0.25em] text-ink-soft">
-              En colaboración con
-            </p>
-            <MarcasAliadas />
+            <div className="mx-auto max-w-2xl text-center">
+              <p className="text-sm font-medium uppercase tracking-[0.25em] text-brand-700">Ecosistema</p>
+              <h2 className="mt-3 font-display text-3xl italic text-brand-900 sm:text-4xl">
+                Parte de una red más grande
+              </h2>
+            </div>
+            <div className="mt-14">
+              <MarcasDestacadas />
+            </div>
           </div>
         </section>
       </main>
