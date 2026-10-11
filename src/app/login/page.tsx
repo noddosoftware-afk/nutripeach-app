@@ -11,7 +11,11 @@ export default async function LoginPage({ searchParams }: PageProps<"/login">) {
   return (
     <main className="flex min-h-full flex-1 flex-col lg:flex-row">
       {/* Panel de marca — 55% en escritorio */}
-      <div className="relative flex flex-col justify-between overflow-hidden bg-brand-900 px-8 py-10 text-cream sm:px-14 sm:py-14 lg:w-[55%] lg:px-20 lg:py-16">
+      <div
+        className="relative flex flex-col justify-between overflow-hidden bg-cover bg-center px-8 py-10 text-cream sm:px-14 sm:py-14 lg:w-[55%] lg:px-20 lg:py-16"
+        style={{ backgroundImage: "url('/landing/ecosistema-bg.jpg')" }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/85" />
         <BotanicoDecorativo />
 
         <div className="relative flex items-center gap-3">

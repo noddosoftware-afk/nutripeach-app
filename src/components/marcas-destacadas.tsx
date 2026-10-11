@@ -25,14 +25,14 @@ export function MarcasDestacadas() {
       {MARCAS.map((m) => (
         <div
           key={m.nombre}
-          className="shadow-soft flex flex-col items-center rounded-2xl border border-cream-200 bg-white p-7 text-center transition-transform duration-200 hover:-translate-y-0.5"
+          className="shadow-soft group flex flex-col items-center rounded-2xl border border-cream-200 bg-white p-7 text-center transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl"
         >
           <Image
             src={m.src}
             alt={m.nombre}
             width={88}
             height={88}
-            className="rounded-full object-cover"
+            className="rounded-full object-cover transition-transform duration-300 group-hover:scale-105"
           />
           <p className="mt-4 font-display text-lg text-brand-900">{m.nombre}</p>
           <p className="mt-1.5 text-sm text-ink-soft">{m.descripcion}</p>

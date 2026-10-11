@@ -123,15 +123,12 @@ export function LandingPage() {
         </section>
 
         {/* Funcionalidades */}
-        <section id="funcionalidades" className="relative overflow-hidden py-20 sm:py-28">
-          <Image
-            src="/landing/funcionalidades-bg.jpg"
-            alt="Rack de mancuernas en un gimnasio con iluminación cálida y dramática"
-            fill
-            sizes="100vw"
-            className="object-cover"
-          />
-          <div className="absolute inset-0 bg-black/45" />
+        <section
+          id="funcionalidades"
+          className="relative overflow-hidden bg-cover bg-center bg-fixed py-20 sm:py-28"
+          style={{ backgroundImage: "url('/landing/funcionalidades-bg.jpg')" }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/50 to-black/65" />
           <div className="relative mx-auto w-full max-w-7xl px-5 sm:px-8">
             <div className="mx-auto max-w-2xl text-center">
               <p className="text-sm font-medium uppercase tracking-[0.25em] text-brand-100">Qué incluye</p>
@@ -190,15 +187,11 @@ export function LandingPage() {
         </section>
 
         {/* Banner visual */}
-        <section className="relative overflow-hidden py-24 sm:py-32">
-          <Image
-            src="/landing/peach-closeup.png"
-            alt="Durazno partido a la mitad sobre una superficie color crema"
-            fill
-            sizes="100vw"
-            className="object-cover"
-          />
-          <div className="absolute inset-0 bg-black/45" />
+        <section
+          className="relative overflow-hidden bg-cover bg-center bg-fixed py-24 sm:py-32"
+          style={{ backgroundImage: "url('/landing/peach-closeup.png')" }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/45 to-black/55" />
           <div className="relative mx-auto flex w-full max-w-3xl flex-col items-center px-5 text-center sm:px-8">
             <p className="font-display text-2xl italic leading-relaxed text-white sm:text-3xl">
               &ldquo;No se trata de reglas estrictas, sino de construir un hábito que puedas sostener.&rdquo;
@@ -207,15 +200,11 @@ export function LandingPage() {
         </section>
 
         {/* Marcas aliadas */}
-        <section className="relative overflow-hidden py-20 sm:py-28">
-          <Image
-            src="/landing/ecosistema-bg.jpg"
-            alt="Duraznos frescos, proteína en polvo y una pesa rusa sobre una superficie oscura"
-            fill
-            sizes="100vw"
-            className="object-cover"
-          />
-          <div className="absolute inset-0 bg-black/45" />
+        <section
+          className="relative overflow-hidden bg-cover bg-center bg-fixed py-20 sm:py-28"
+          style={{ backgroundImage: "url('/landing/ecosistema-bg.jpg')" }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/50 to-black/65" />
           <div className="relative mx-auto w-full max-w-7xl px-5 sm:px-8">
             <div className="mx-auto max-w-2xl text-center">
               <p className="text-sm font-medium uppercase tracking-[0.25em] text-brand-100">Ecosistema</p>
@@ -230,15 +219,11 @@ export function LandingPage() {
         </section>
 
         {/* CTA final */}
-        <section className="relative overflow-hidden py-20 text-white sm:py-24">
-          <Image
-            src="/landing/cta-bg.jpg"
-            alt="Mancuerna sobre una banca de madera oscura con luz cálida entrando por una ventana"
-            fill
-            sizes="100vw"
-            className="object-cover"
-          />
-          <div className="absolute inset-0 bg-black/45" />
+        <section
+          className="relative overflow-hidden bg-cover bg-center bg-fixed py-20 text-white sm:py-24"
+          style={{ backgroundImage: "url('/landing/cta-bg.jpg')" }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/70" />
           <div className="relative mx-auto flex w-full max-w-3xl flex-col items-center gap-6 px-5 text-center sm:px-8">
             <h2 className="font-display text-3xl italic sm:text-4xl">¿Ya eres paciente del consultorio?</h2>
             <p className="max-w-md text-brand-100/80">

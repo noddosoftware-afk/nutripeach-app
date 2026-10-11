@@ -59,11 +59,17 @@ export default async function DashboardPage() {
 
   return (
     <div className="space-y-10">
-      <div>
-        <h1 className="font-display text-3xl italic text-brand-900">
-          {saludo(hora)}, {primerNombre}
-        </h1>
-        <p className="mt-1 text-sm text-ink-soft">Este es el resumen de tu consultorio.</p>
+      <div
+        className="shadow-soft relative overflow-hidden rounded-2xl bg-cover bg-center p-8 sm:p-10"
+        style={{ backgroundImage: "url('/landing/cta-bg.jpg')" }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/50 to-black/20" />
+        <div className="relative">
+          <h1 className="font-display text-3xl italic text-white">
+            {saludo(hora)}, {primerNombre}
+          </h1>
+          <p className="mt-1 text-sm text-white/80">Este es el resumen de tu consultorio.</p>
+        </div>
       </div>
 
       <div className="flex flex-wrap gap-3">
@@ -147,7 +153,7 @@ function StatCard({
 }) {
   return (
     <Link href={href} className="group block">
-      <Tarjeta className="p-4 transition-colors group-hover:border-brand-400">
+      <Tarjeta className="p-4 transition-all duration-200 group-hover:-translate-y-0.5 group-hover:border-brand-400 group-hover:shadow-lg">
         <div className="flex items-center gap-3">
           <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-50 text-brand-700">
             <Icon size={20} />
