@@ -2,7 +2,7 @@ import { Apple, Search } from "lucide-react";
 import Image from "next/image";
 import { listarAlimentos } from "@/data/alimentos";
 import { crearAlimentoAction } from "./actions";
-import { Campo, Input, Select, Boton, Tarjeta } from "@/components/campo";
+import { Campo, Input, Select, Boton, Tarjeta, EstadoVacio } from "@/components/campo";
 import { fotoDeAlimento } from "@/lib/foto-alimento";
 
 export default async function AlimentosPage({ searchParams }: PageProps<"/alimentos">) {
@@ -78,10 +78,7 @@ export default async function AlimentosPage({ searchParams }: PageProps<"/alimen
       </form>
 
       {alimentos.length === 0 ? (
-        <div className="flex flex-col items-center gap-2 rounded-xl border border-dashed border-cream-200 bg-white py-12 text-center">
-          <Apple size={28} className="text-ink-soft" />
-          <p className="text-sm text-ink-soft">Sin alimentos en el catálogo todavía.</p>
-        </div>
+        <EstadoVacio icon={Apple} imagen="/stock/alimentos.jpg" titulo="Sin alimentos en el catálogo todavía." />
       ) : (
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
           {alimentos.map((a) => {

@@ -6,6 +6,7 @@ import { createClient } from "@/lib/supabase/server";
 import { requireStaff } from "@/data/auth";
 import { NuevaRecetaForm } from "./nueva-form";
 import { fotoDeReceta } from "@/lib/foto-alimento";
+import { EstadoVacio } from "@/components/campo";
 
 export default async function RecetasPage() {
   await requireStaff();
@@ -33,10 +34,7 @@ export default async function RecetasPage() {
       </details>
 
       {(recetas ?? []).length === 0 ? (
-        <div className="flex flex-col items-center gap-2 rounded-xl border border-dashed border-cream-200 bg-white py-12 text-center">
-          <ChefHat size={28} className="text-ink-soft" />
-          <p className="text-sm text-ink-soft">Sin recetas todavía.</p>
-        </div>
+        <EstadoVacio icon={ChefHat} imagen="/stock/recetas.jpg" titulo="Sin recetas todavía." />
       ) : (
         <ul className="divide-y divide-cream-200 rounded-xl border border-cream-200 bg-white">
           {(recetas ?? []).map((r) => {

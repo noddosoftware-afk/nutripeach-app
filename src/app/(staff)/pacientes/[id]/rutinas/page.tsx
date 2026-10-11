@@ -1,5 +1,7 @@
 import Link from "next/link";
+import { Dumbbell } from "lucide-react";
 import { listarRutinasPaciente } from "@/data/rutinas";
+import { EstadoVacio } from "@/components/campo";
 
 const ESTADO_LABEL: Record<string, string> = {
   borrador: "Borrador",
@@ -20,7 +22,7 @@ export default async function RutinasPacientePage({ params }: PageProps<"/pacien
       </div>
 
       {rutinas.length === 0 ? (
-        <p className="text-sm text-ink-soft">Sin rutinas todavía.</p>
+        <EstadoVacio icon={Dumbbell} titulo="Sin rutinas todavía." />
       ) : (
         <ul className="divide-y divide-cream-200 rounded-2xl border border-cream-200 bg-white shadow-soft">
           {rutinas.map((r) => (

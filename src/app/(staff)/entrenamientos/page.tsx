@@ -1,7 +1,7 @@
 import { Dumbbell } from "lucide-react";
 import { listarEjercicios } from "@/data/ejercicios";
 import { crearEjercicioAction } from "./actions";
-import { Campo, Input, Select, Textarea, Boton, Tarjeta } from "@/components/campo";
+import { Campo, Input, Select, Textarea, Boton, Tarjeta, EstadoVacio } from "@/components/campo";
 import { EjercicioVideo } from "@/components/ejercicio-video";
 
 const NIVEL_LABEL: Record<string, string> = {
@@ -56,10 +56,7 @@ export default async function EntrenamientosPage() {
       </details>
 
       {ejercicios.length === 0 ? (
-        <div className="flex flex-col items-center gap-2 rounded-xl border border-dashed border-cream-200 bg-white py-12 text-center">
-          <Dumbbell size={28} className="text-ink-soft" />
-          <p className="text-sm text-ink-soft">Sin ejercicios en el catálogo todavía.</p>
-        </div>
+        <EstadoVacio icon={Dumbbell} imagen="/stock/entrenamientos.jpg" titulo="Sin ejercicios en el catálogo todavía." />
       ) : (
         <div className="space-y-8">
           {[...porGrupo.entries()].map(([grupo, lista]) => (

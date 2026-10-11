@@ -1,5 +1,7 @@
 import Link from "next/link";
+import { ClipboardList } from "lucide-react";
 import { listarPlanesPaciente } from "@/data/planes";
+import { EstadoVacio } from "@/components/campo";
 
 const ESTADO_LABEL: Record<string, string> = {
   borrador: "Borrador",
@@ -22,7 +24,7 @@ export default async function PlanesPacientePage({ params }: PageProps<"/pacient
       </div>
 
       {planes.length === 0 ? (
-        <p className="text-sm text-ink-soft">Sin planes todavía.</p>
+        <EstadoVacio icon={ClipboardList} titulo="Sin planes todavía." />
       ) : (
         <ul className="divide-y divide-cream-200 rounded-2xl border border-cream-200 bg-white shadow-soft">
           {planes.map((p) => (

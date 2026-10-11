@@ -1,6 +1,8 @@
 import Link from "next/link";
+import { ClipboardList } from "lucide-react";
 import { requireStaff } from "@/data/auth";
 import { createClient } from "@/lib/supabase/server";
+import { EstadoVacio } from "@/components/campo";
 
 export default async function PlanesGlobalPage() {
   await requireStaff();
@@ -14,9 +16,14 @@ export default async function PlanesGlobalPage() {
 
   return (
     <div className="space-y-4">
-      <h1 className="text-xl font-semibold text-ink">Planes</h1>
+      <h1 className="font-display text-2xl text-brand-900">Planes</h1>
       {!planes || planes.length === 0 ? (
-        <p className="text-sm text-ink-soft">Aún no hay planes creados. Empieza desde el expediente de un paciente.</p>
+        <EstadoVacio
+          icon={ClipboardList}
+          imagen="/stock/planes.jpg"
+          titulo="Aún no hay planes creados."
+          descripcion="Empieza desde el expediente de un paciente."
+        />
       ) : (
         <ul className="divide-y divide-cream-200 rounded-2xl border border-cream-200 bg-white shadow-soft">
           {planes.map((p) => (

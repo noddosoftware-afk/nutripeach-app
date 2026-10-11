@@ -1,4 +1,6 @@
+import { Ruler } from "lucide-react";
 import { listarMedicionesPaciente } from "@/data/consultas";
+import { EstadoVacio } from "@/components/campo";
 
 export default async function MedicionesPage({ params }: PageProps<"/pacientes/[id]/mediciones">) {
   const { id } = await params;
@@ -8,7 +10,7 @@ export default async function MedicionesPage({ params }: PageProps<"/pacientes/[
     <div className="space-y-4">
       <h2 className="text-sm font-semibold text-ink">Historial de mediciones</h2>
       {mediciones.length === 0 ? (
-        <p className="text-sm text-ink-soft">Sin mediciones registradas todavía.</p>
+        <EstadoVacio icon={Ruler} titulo="Sin mediciones registradas todavía." />
       ) : (
         <div className="overflow-x-auto rounded-2xl border border-cream-200 bg-white shadow-soft">
           <table className="w-full text-sm">

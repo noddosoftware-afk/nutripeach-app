@@ -104,14 +104,16 @@ export function LandingPage() {
 
             <div className="relative">
               <div className="shadow-soft relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-cream-200 lg:aspect-[16/11]">
-                <Image
-                  src="/landing/hero.png"
-                  alt="Mesa cálida con duraznos frescos, una servilleta de lino y un vaso de agua"
-                  fill
-                  priority
-                  sizes="(min-width: 1024px) 50vw, 100vw"
-                  className="object-cover"
-                />
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  poster="/landing/hero.png"
+                  className="absolute inset-0 h-full w-full object-cover"
+                >
+                  <source src="/landing/hero-video.mp4" type="video/mp4" />
+                </video>
               </div>
               <div className="shadow-soft absolute -bottom-6 -left-6 hidden max-w-[220px] rounded-2xl border border-cream-200 bg-white p-4 sm:block">
                 <p className="font-display text-sm italic text-brand-900">

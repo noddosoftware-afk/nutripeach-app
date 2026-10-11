@@ -3,6 +3,7 @@ import { MessageCircle, UserRound } from "lucide-react";
 import { formatDistanceToNow } from "date-fns";
 import { es } from "date-fns/locale";
 import { listarConversaciones } from "@/data/mensajes";
+import { EstadoVacio } from "@/components/campo";
 
 export default async function MensajesPage() {
   const conversaciones = await listarConversaciones();
@@ -12,10 +13,7 @@ export default async function MensajesPage() {
       <h1 className="font-display text-2xl font-semibold text-ink">Mensajes</h1>
 
       {conversaciones.length === 0 ? (
-        <div className="flex flex-col items-center gap-2 rounded-xl border border-dashed border-cream-200 bg-white py-12 text-center">
-          <MessageCircle size={28} className="text-ink-soft" />
-          <p className="text-sm text-ink-soft">No hay pacientes activos todavía.</p>
-        </div>
+        <EstadoVacio icon={MessageCircle} imagen="/stock/mensajes.jpg" titulo="No hay pacientes activos todavía." />
       ) : (
         <ul className="divide-y divide-cream-200 rounded-xl border border-cream-200 bg-white">
           {conversaciones.map((c) => (

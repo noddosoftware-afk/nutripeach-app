@@ -100,18 +100,26 @@ export function Avatar({ nombre, size = 40 }: { nombre: string; size?: number })
 
 export function EstadoVacio({
   icon: Icon,
+  imagen,
   titulo,
   descripcion,
   accion,
 }: {
   icon: React.ComponentType<{ size?: number; className?: string }>;
+  imagen?: string;
   titulo: string;
   descripcion?: string;
   accion?: ReactNode;
 }) {
   return (
-    <div className="flex flex-col items-center gap-3 rounded-2xl border border-dashed border-cream-200 bg-white py-14 text-center">
-      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-50 text-brand-700">
+    <div className="flex flex-col items-center gap-3 overflow-hidden rounded-2xl border border-dashed border-cream-200 bg-white pb-14 text-center">
+      {imagen && (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img src={imagen} alt="" className="mb-2 h-40 w-full object-cover" />
+      )}
+      <div
+        className={`flex h-12 w-12 items-center justify-center rounded-full bg-brand-50 text-brand-700 ${imagen ? "-mt-20 ring-4 ring-white" : ""}`}
+      >
         <Icon size={22} />
       </div>
       <div className="space-y-1">

@@ -1,5 +1,7 @@
 import Link from "next/link";
+import { Stethoscope } from "lucide-react";
 import { listarConsultas } from "@/data/consultas";
+import { EstadoVacio } from "@/components/campo";
 
 export default async function ConsultasPage({ params }: PageProps<"/pacientes/[id]/consultas">) {
   const { id } = await params;
@@ -15,7 +17,7 @@ export default async function ConsultasPage({ params }: PageProps<"/pacientes/[i
       </div>
 
       {consultas.length === 0 ? (
-        <p className="text-sm text-ink-soft">Sin consultas registradas todavía.</p>
+        <EstadoVacio icon={Stethoscope} titulo="Sin consultas registradas todavía." />
       ) : (
         <div className="space-y-3">
           {consultas.map((c) => {
